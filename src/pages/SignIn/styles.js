@@ -11,7 +11,6 @@ export const Container = styled.div`
     justify-content: center;
 
     & > div:first-child {
-        /* align-self: end; */
         margin: 15.8rem 0 7.3rem;
     }
 
@@ -20,7 +19,9 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
 
-        padding-right: 10.8rem;
+        & > div:first-child {
+            margin: 0;
+        }
     }
 `;
 
@@ -34,13 +35,16 @@ export const Form = styled.form`
     
     @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
         max-width: 47.6rem;
+
+        margin-right: 10.8rem;
         padding: 6.4rem;
 
         background-color: ${({theme}) => theme.COLORS.DARK_700};
         border-radius: 1.6rem;
     }
 
-    @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+    @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
         max-width: clamp(62rem, 10vw + 2.2rem,76.6rem);
+        margin-right: 30rem;
     }
 `;  
