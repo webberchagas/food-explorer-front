@@ -7,6 +7,7 @@ import { FoodList } from '../../components/FoodList';
 import { CardFood } from '../../components/CardFood';
 
 import { Container, Section } from "./styles";
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 import React from 'react';
 
@@ -28,7 +29,7 @@ export function Home(){
               
             </main> */}
 
-            {/* <Footer /> */}
+            <Footer />
         </Container>
     )
 }

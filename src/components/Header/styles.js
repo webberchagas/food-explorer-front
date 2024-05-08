@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 export const Container = styled.div`
     width: 100%;
@@ -7,17 +8,27 @@ export const Container = styled.div`
     background-color: ${({theme}) => theme.COLORS.DARK_700};
 
     grid-area: header;
+`;
+
+export const MobileMenu = styled.aside`
     display: flex;
     justify-content: space-between;
 
     & > div {
+        img {
+            height: 24px;
+        }
+
         h1 { 
             font-size: 1.9rem;
             font-weight: 600;
         }
     }
 
-`;
+    @media (min-width: ${DEVICE_BREAKPOINTS.MD}){
+        display: none;
+    }
+`
 
 export const Cart = styled.button` 
     background: transparent;
