@@ -1,5 +1,7 @@
 import Menu from '../../assets/icons/Menu.svg';
 import Receipt from '../../assets/icons/Receipt.svg';
+import SignOut from '../../assets/icons/SignOut.svg';
+
 
 import { ButtonIcon } from '../ButtonIcon';
 import { Logo } from '../Logo';
@@ -18,9 +20,13 @@ export function Header(){
                 </Cart>
             </MobileMenu>
 
-            {/* <DesktopMenu>
+            <DesktopMenu>
                 <Logo/>
-            </DesktopMenu> */}
+                <input type="text" />
+                <button>
+                    <img src={SignOut}/>
+                </button>
+            </DesktopMenu>
         </Container>
     )
 }

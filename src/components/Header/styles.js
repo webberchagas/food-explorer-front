@@ -47,3 +47,24 @@ export const Cart = styled.button`
         border-radius: 9999px;
     }
 `
+
+export const DesktopMenu = styled.div`
+    display: none;
+    
+    @media (min-width: ${DEVICE_BREAKPOINTS.MD}){
+        display: flex;
+
+        & > div {
+            width: fit-content;
+
+            img {
+                height: 24px;
+            }
+
+            h1 { 
+                font-size: 1.9rem;
+                font-weight: 600;
+            }
+        } 
+    }
+`;
