@@ -20,4 +20,9 @@ export default createGlobalStyle`
         text-decoration: none;
     }
 
+    button {
+        background: transparent;
+        border: 0;
+    }
+
 `;

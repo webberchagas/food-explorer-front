@@ -6,8 +6,16 @@ export const Container = styled.div`
     padding: 2.6rem 2.8rem 2.4rem;
     
     background-color: ${({theme}) => theme.COLORS.DARK_700};
-
     grid-area: header;
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.MD}){
+
+        height: 104px;
+    }
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.XL}){
+        padding-inline: 12rem;
+    }
 `;
 
 export const MobileMenu = styled.aside`
@@ -53,6 +61,8 @@ export const DesktopMenu = styled.div`
     
     @media (min-width: ${DEVICE_BREAKPOINTS.MD}){
         display: flex;
+        gap: 3.2rem;
+        height: 100%;
 
         & > div {
             width: fit-content;
@@ -65,6 +75,14 @@ export const DesktopMenu = styled.div`
                 font-size: 1.9rem;
                 font-weight: 600;
             }
-        } 
+        }
+        
+        input {
+            flex: 1;
+            height: 4.8rem;
+            background-color: ${({ theme }) => theme.COLORS.DARK_900};
+            border: 0;
+            border-radius: 5px;
+        }
     }
 `;

@@ -4,11 +4,15 @@ import SignOut from '../../assets/icons/SignOut.svg';
 
 
 import { ButtonIcon } from '../ButtonIcon';
+import { Button } from '../Button';
+
 import { Logo } from '../Logo';
 
 import { Container, Cart, MobileMenu, DesktopMenu} from "./styles";
 
 export function Header(){
+    const isAdmin = true
+    
     return (
         <Container>
             <MobileMenu>
@@ -23,6 +27,11 @@ export function Header(){
             <DesktopMenu>
                 <Logo/>
                 <input type="text" />
+                <div>
+                    <ButtonIcon icon={Receipt} title="Menu de opções" />
+                    <Button title="Pedidos (0)" />
+                </div>
+
                 <button>
                     <img src={SignOut}/>
                 </button>
